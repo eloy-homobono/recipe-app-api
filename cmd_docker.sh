@@ -13,3 +13,9 @@ alias testing='docker-compose run --rm app sh -c "python manage.py test"'
 
 # Run project
 alias run='docker-compose up'
+
+# Remove containers for new up
+alias down="docker-compose down"
+
+# Create new app
+alias mkapp='function(){docker-compose run --rm app sh -c "python manage.py startapp $@"}'
