@@ -19,3 +19,6 @@ alias down="docker-compose down"
 
 # Create new app
 alias mkapp='function(){docker-compose run --rm app sh -c "python manage.py startapp $@"}'
+
+
+alias db_wait='docker-compose run --rm app sh -c "python manage.py wait_for_db"'
